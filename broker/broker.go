@@ -26,6 +26,7 @@ func main() {
 			if (msg[1] != "") {
 				fmt.Println("Client_id, real_time", msg)
 				fake_time := fmt.Sprintf("%f",float64(time.Now().UnixNano())/1e9 - 1587117000)
+				//fake_time := fmt.Sprintf("%f",float64(time.Now().UnixNano())/1e9)
 				fmt.Println("fake time:", fake_time)
 				msg[1] = fake_time //"1587117099.5642722"
 				responder.SendMessage(msg)

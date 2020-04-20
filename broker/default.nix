@@ -1,18 +1,16 @@
 { pkgs ? import <nixpkgs> {} }:
 with pkgs;
 let
-  inherit stdenv buildGoModule zeromq pkg-config lib;
+  inherit stdenv buildGoModule zeromq pkg-config;
 in
   buildGoModule rec {
-   pname = "poc-broker";
+   pname = "broker";
    version = "0.0.1";
   
-   goPackagePath = "poc-broker";
+   goPackagePath = "broker";
 
    src = ./.;
    modSha256 = "02fvav564b0vmnsrkw7xvqg1afwhp92h0glhn7nvrgdidk8r4534";
-
-   #buildFlags = [ "-tags" "extended" ];
 
    buildInputs = [ zeromq ];
 
@@ -21,7 +19,7 @@ in
    subPackages = [ "." ];
 
    meta = with stdenv.lib; {
-     description = "poc for batKube.";
+     description = "Broker poc";
      license = licenses.asl20;
      maintainers = with maintainers; [ augu5ste ];
    };
