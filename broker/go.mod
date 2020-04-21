@@ -1,4 +1,4 @@
-module poc-broker
+module broker
 
 go 1.13
 
