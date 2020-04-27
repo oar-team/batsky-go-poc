@@ -1,0 +1,4 @@
+github.com/oar-team/batsky-go v0.0.4 h1:Kg5I2rPGk1Li6DXPDPtSMS7dhF72t+FmUbQpx3TWjmQ=
+github.com/oar-team/batsky-go v0.0.4/go.mod h1:BK5c1tLLDIg7A9LuqGXuTnSpYFIwvefCX8EMHFB9cww=
+github.com/pebbe/zmq4 v1.2.0 h1:SMCj4kvOpBvM97uWlv7QSlwjpCpYOXdiK8piMjGmzOs=
+github.com/pebbe/zmq4 v1.2.0/go.mod h1:7N4y5R18zBiu3l0vajMUWQgZyjv464prE8RCyBcmnZM=
