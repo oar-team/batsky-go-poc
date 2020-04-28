@@ -45,6 +45,7 @@ func main() {
 			reply = append(reply, requester.Message{
 				RequestType: m.RequestType,
 				Data:        fake_time,
+				UUID:        m.UUID,
 			})
 		}
 
@@ -57,6 +58,6 @@ func main() {
 			panic("Error sending message: " + err.Error())
 		}
 		fmt.Println("Sent ", reply)
-		time.Sleep(500 * time.Millisecond)
+		time.Sleep(200 * time.Millisecond)
 	}
 }
