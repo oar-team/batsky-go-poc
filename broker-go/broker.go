@@ -11,10 +11,21 @@ import (
 
 func main() {
 	responder, _ := zmq.NewSocket(zmq.REP)
+	handshake, _ := zmq.NewSocket(zmq.REQ)
 	defer responder.Close()
+	defer handshake.Close()
 	responder.Bind("tcp://127.0.0.1:27000")
+	handshake.Bind("tcp://127.0.0.1:27001")
 
 	for {
+		// Tell time we're ready to receive
+		_, err := handshake.SendBytes([]byte("ready"), 0)
+		handshakeReplyBytes, _ := handshake.RecvBytes(0)
+		handshakeReply := string(handshakeReplyBytes)
+		if handshakeReply != "ok" {
+			panic(fmt.Sprintf("Failed handshake : Expected %s, got %s", "ok", handshakeReply))
+		}
+
 		//  Wait for next request from client
 		msg, err := responder.RecvBytes(0)
 		var messages []requester.Message
