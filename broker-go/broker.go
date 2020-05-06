@@ -45,13 +45,13 @@ func main() {
 			//fmt.Println("df = float64(d)/1e9", df)
 			//fmt.Println("df + now", df+now)
 			//fmt.Println("requested", requested)
-			i := 0
-			for ; i < len(requestedCalls) && requestedCalls[i] < requested; i++ {
-			}
 			if requested > now {
+				i := 0
+				for ; i < len(requestedCalls) && requestedCalls[i] < requested; i++ {
+				}
 				if i < len(requestedCalls) && requestedCalls[i] != requested {
 					requestedCalls = append(requestedCalls, 0)
-					copy(requestedCalls[i:], requestedCalls[i+1:])
+					copy(requestedCalls[i+1:], requestedCalls[i:])
 					requestedCalls[i] = requested
 				}
 				if i == len(requestedCalls) {
@@ -80,8 +80,8 @@ func main() {
 		//fmt.Println("float64", float64(int64(now*1000)+deltams))
 		//fmt.Println("/1000", float64(int64(now*1000)+deltams)/1000)
 		fmt.Println("now", now)
-		incrementalTime := false
-		deltams := int64(50)
+		incrementalTime := true
+		deltams := int64(2)
 		var next float64
 		if !incrementalTime {
 			if len(requestedCalls) == 0 {
