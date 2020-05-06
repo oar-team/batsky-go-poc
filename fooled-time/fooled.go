@@ -2,17 +2,27 @@ package main
 
 import (
 	"fmt"
+	gotime "time"
 
-	time "github.com/oar-team/batsky-go"
+	"github.com/oar-team/batsky-go/time"
 )
 
 func main() {
 	now := time.Now()
-	// t := fmt.Sprintf("%f",float64(now.UnixNano())/1e9)
-	//time.Sleep(1 * time.Second)
-	fmt.Println("Hello, world.")
-	for i := 0; i < 4; i++ {
-		fmt.Println("Now: ", now)
-	}
-	//fmt.Println("now from epoch: ", t)
+	t := gotime.Now()
+	fmt.Println("Now: ", now)
+	fmt.Println("now from epoch: ", t)
+	fmt.Println()
+
+	fmt.Println("now", time.Now())
+	fmt.Println("sleeping for 5h")
+	time.Sleep(5 * time.Hour)
+	fmt.Println("now", time.Now())
+	fmt.Println()
+
+	fmt.Println("now", time.Now())
+	fmt.Println("sleeping for 5 years")
+	time.Sleep(5 * 8766 * time.Hour)
+	fmt.Println("now", time.Now())
+	fmt.Println()
 }

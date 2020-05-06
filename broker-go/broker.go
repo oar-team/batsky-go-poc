@@ -79,18 +79,18 @@ func main() {
 		//fmt.Println("+delta", int64(now*1000)+deltams)
 		//fmt.Println("float64", float64(int64(now*1000)+deltams))
 		//fmt.Println("/1000", float64(int64(now*1000)+deltams)/1000)
-		useRequestedCalls := false
+		fmt.Println("now", now)
+		incrementalTime := false
+		deltams := int64(50)
 		var next float64
-		if useRequestedCalls {
+		if !incrementalTime {
 			if len(requestedCalls) == 0 {
 				next = now
 			} else {
 				next = requestedCalls[0]
 				requestedCalls = requestedCalls[1:]
-				fmt.Println("now", now)
 			}
 		} else {
-			deltams := int64(10)
 			next = float64((int64(now*1000) + deltams)) / 1000
 		}
 		now = next

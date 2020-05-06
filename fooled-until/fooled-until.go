@@ -9,5 +9,5 @@ import (
 
 func main() {
 	stop := make(chan struct{})
-	wait.Until(func() { fmt.Println("stuck in a loop)") }, time.Second, stop)
+	wait.Until(func() { fmt.Println("stuck in a loop") }, time.Second, stop)
 }

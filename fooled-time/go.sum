@@ -1,6 +1,6 @@
-github.com/oar-team/batsky-go v0.0.2 h1:DeyhxMfkjExpW33nJHDgKI7EpXdZ+HDAr+Gn20J4w2U=
-github.com/oar-team/batsky-go v0.0.2/go.mod h1:YPrKDRe9llA9/4Creoj7/+PHMRXG0h7JgEPu1kXA7uE=
-github.com/oar-team/batsky-go v0.0.3 h1:LJiT+TQCbNKb0H2tKdmD1WTCNQA6TJEFpV3RgKMf9+A=
-github.com/oar-team/batsky-go v0.0.3/go.mod h1:BK5c1tLLDIg7A9LuqGXuTnSpYFIwvefCX8EMHFB9cww=
+github.com/google/uuid v1.1.1 h1:Gkbcsh/GbpXz7lPftLA3P6TYMwjCLYm83jiFQZF/3gY=
+github.com/google/uuid v1.1.1/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
+github.com/oar-team/batsky-go v0.1.0 h1:jf5yQjsuKvK5OsxAQMteDiohWneyqcvolX4zb1YuS8w=
+github.com/oar-team/batsky-go v0.1.0/go.mod h1:93KWT5fGlWkzE7wsn0z5uQwTzZ4YWcdy++stNAkiKTc=
 github.com/pebbe/zmq4 v1.2.0 h1:SMCj4kvOpBvM97uWlv7QSlwjpCpYOXdiK8piMjGmzOs=
 github.com/pebbe/zmq4 v1.2.0/go.mod h1:7N4y5R18zBiu3l0vajMUWQgZyjv464prE8RCyBcmnZM=
