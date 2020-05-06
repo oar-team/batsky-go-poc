@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
-	"time"
 
-	"k8s.io/apimachinery/pkg/util/wait"
+	"github.com/oar-team/batsky-go/time"
+
+	"github.com/oar-team/batsky-apimachinery/pkg/util/wait"
 )
 
 func main() {
