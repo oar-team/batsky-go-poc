@@ -80,7 +80,7 @@ func main() {
 		//fmt.Println("float64", float64(int64(now*1000)+deltams))
 		//fmt.Println("/1000", float64(int64(now*1000)+deltams)/1000)
 		fmt.Println("now", now)
-		incrementalTime := false
+		incrementalTime := true
 		deltams := int64(2)
 		var next float64
 		if !incrementalTime {
